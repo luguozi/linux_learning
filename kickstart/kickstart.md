@@ -234,27 +234,28 @@ wget
 %post
 rm -fr /etc/yum.repos.d/*
 cat > /etc/yum.repos.d/dvd.repo << EOT
-> [dvd]
-> name=this is pxe's source
-> baseurl=http://172.16.10.2/dvd
-> enabled=1
-> gpgcheck=0
-> EOT
+[dvd]
+name=this is pxe's source
+baseurl=http://172.16.10.2/dvd
+enabled=1
+gpgcheck=0
+EOT
 echo "lugz88" | passwd --stdin root
 yum clean all
 yum repolist
 # workaround anaconda requirements
 wget -O /tmp/optimization.sh http://172.16.10.2/ks_config/optimization.sh &>/dev/null
+chmod +x /tmp/6optimization.sh
 /bin/sh /tmp/optimization.sh
 %end
 
 ```
 
   4)配置开机优化脚本
-[root@pxe ~]# touch ～/optimization.sh
+[root@pxe ~]# touch ～/6optimization.sh
 >开机优化脚本待补充
 
-  5) 通过httpd服务发布ks文件和optimization.sh文件
+  5) 通过httpd服务发布ks文件和6optimization.sh文件
 ```
 [root@pxe ~]# yum -y install httpd
 
@@ -263,11 +264,11 @@ wget -O /tmp/optimization.sh http://172.16.10.2/ks_config/optimization.sh &>/dev
 [root@pxe ~]# ll -d /var/www/html/myks.cfg 
 -rw-r--r--. 1 apache apache 1524 Jul 28 03:56 /var/www/html/myks.cfg
 [root@pxe ~]# mkdir -p /var/www/html/ks_config/
-[root@pxe ~]# cp ～/optimization.sh /var/www/html/ks_config/optimization.sh
+[root@pxe ~]# cp ～/6optimization.sh /var/www/html/ks_config/6optimization.sh
 [root@pxe ~]# yum -y install elinks
 [root@pxe ~]# service restrat httpd
 [root@pxe ~]# elinks http://172.16.10.2/myks.cfg
-[root@pxe ~]# elinks http://172.16.10.2/ks_config/optimization.sh
+[root@pxe ~]# elinks http://172.16.10.2/ks_config/6optimization.sh
 
 ```
 
@@ -299,94 +300,76 @@ wget -O /tmp/optimization.sh http://172.16.10.2/ks_config/optimization.sh &>/dev
 
 [root@pxe-server ~]# vim /var/www/html/rhel7u3_ks.cfg
 ```
-#platform=x86, AMD64, 或 Intel EM64T
-#version=DEVEL
-# Firewall configuration
-firewall --disabled
-# Install OS instead of upgrade
-install
-# Use network installation
-url --url="http://172.16.10.2/rhel7"
-# Root password
-rootpw --iscrypted $1$FPdwR/$Msx86rM493PhuBzOGuHXl/
+#version=RHEL7  
 # System authorization information
-auth  --useshadow  --passalgo=sha512
-# Use text mode install
+auth --enableshadow --passalgo=sha512
+# Use url installation media 
+url --url="http://172.16.10.2/rhel7/"
+# Use text install  
 text
-firstboot --disable
-# System keyboard
-keyboard us
-# System language
-lang zh_CN
-# SELinux configuration
-selinux --disabled
-# Installation logging level
-logging --level=info
-# Reboot after installation
+install
 reboot
-# System timezone
-timezone --isUtc Asia/Shanghai
-# Network information
-network  --bootproto=dhcp --device=eth0 --onboot=on
-# System bootloader configuration
-bootloader --append="selinux=0" --location=mbr --md5pass="$1$N2ewR/$2CQjSCZk/bSiBBTbJ/4Wi1"
-# Clear the Master Boot Record
+firewall --disabled
+# Run the Setup Agent on first boot  
+firstboot --disable
+ignoredisk --only-use=sda
+# Keyboard layouts  
+keyboard --vckeymap=cn --xlayouts='cn'
+# System language  
+lang zh_CN.UTF-8
+selinux --disabled
+logging --level=info
+# Network information  
+network  --bootproto=dhcp --device=ens33 --onboot=on
+network  --hostname=rhel7.luguozi.com
+# Root password  
+rootpw --iscrypted $6$wxzxZ/G0sp5gxJBr$yzLoQ8mW2kL3w1ozU1GXYtmWytlSuSPFA8ixAAsNNdgnrwUjYRU3zFMCeEnfLROO3ayIOD0/Skire8qlIWQKx0
+# System timezone  
+timezone Asia/Shanghai --isUtc
+# System bootloader configuration  
+bootloader --append=" crashkernel=auto" --location=mbr --boot-drive=sda  
+# Partition clearing information  
 zerombr
-# Partition clearing information
-clearpart --all --initlabel 
-# Disk partitioning information
-part /boot --fstype="ext4" --size=200
-part / --fstype="ext4" --size=20000
+clearpart --all --initlabel
+# Disk partitioning information  
+#part pv.20 --fstype="lvmpv" --ondisk=sda --size=19979
+#part /boot --fstype="xfs" --ondisk=sda --size=200
+#volgroup data --pesize=4096 pv.20
+#logvol / --fstype="xfs" --grow --size=1024 --name=root --vgname=data
+#logvol swap  --fstype="swap" --size=2048 --name=swap01 --vgname=data
+part /boot --fstype="xfs" --size=200
 part swap --fstype="swap" --size=1024
-
-%pre
-clearpart --all
-part /boot --fstype ext4 --size=100
-part pv.100000 --size=10000
-part swap --size=512
-volgroup vg --pesize=32768 pv.100000
-logvol /home --fstype ext4 --name=lv_home --vgname=vg --size=480
-logvol / --fstype ext4 --name=lv_root --vgname=vg --size=8192
-%end
-
+part / --fstype="xfs" --grow --size=1024
+%packages
+@core
+net-tools
+wget
 %post
 rm -fr /etc/yum.repos.d/*
-cat > /etc/yum.repos.d/dvd.repo << EOT
-[dvd]
-name=this's PXE source
-baseurl=http://192.168.0.16/rhel6
+cat > /etc/yum.repos.d/rhel7.repo << EOT
+[rhel7]
+name=this is pxe's source
+baseurl=http://172.16.10.2/rhel7
 enabled=1
-gpgchec=0
+gpgcheck=0
 EOT
-%end
-
-%packages
-@basic-desktop
-@chinese-support
-@desktop-debugging
-@desktop-platform
-@development
-@fonts
-@graphical-admin-tools
-@input-methods
-@legacy-x
-@remote-desktop-clients
-@x11
-httpd
-php
-mysql-server
-mysql
-php-mysql
-lftp
-ftp
-openssh
-
+echo "lugz88" | passwd --stdin root
+yum clean all
+yum repolist
+# workaround anaconda requirements
+wget -O /tmp/7optimization.sh http://172.16.10.2/ks_config/7optimization.sh &>/dev/null
+chmod +x /tmp/7optimization.sh
+/bin/sh /tmp/7optimization.sh
 
 %end
-
 ```
 
- 3 定义内核vmlinuz与临时根文件系统initrd.img
+3、配置开机优化脚本
+[root@pxe ~]# touch /var/www/html/ks_config/7optimization.sh
+[root@pxe ~]# chmod +x /var/www/html/ks_config/7optimization.sh
+> 脚本内容待补充
+
+ 4 定义内核vmlinuz与临时根文件系统initrd.img
 ```
 [root@pxe-server ~]# mkdir -p /var/lib/tftpboot/rhel7u3
 [root@pxe-server ~]# cd /var/www/html/rhel7/
@@ -396,7 +379,7 @@ openssh
 ```
 
 
- 4  定义菜单 标签名
+ 5 定义菜单 标签名
 ```
 [root@pxe-server ~]# vim /var/lib/tftpboot/pxelinux.cfg/default 
 label install7
@@ -405,13 +388,6 @@ label install7
         append initrd=rhel7u3/initrd.img ks=http://172.16.10.2/rhel7u3_ks.cfg
 
 ```
-
-
-
-
-https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html
-
-http://www.zyops.com/autoinstall-kickstart
 
 
 ## kickstart快速准备脚本说明
