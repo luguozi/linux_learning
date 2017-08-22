@@ -398,7 +398,8 @@ label install7
 ##kickstart 文件格式简述
 阐述文件格式有哪些，方便自己以后查看。
 放rhel6和rhel7
-
+参考
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html
 
 ## kickstart快速准备脚本说明
 脚本分几块：
