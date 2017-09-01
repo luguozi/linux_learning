@@ -280,7 +280,10 @@ chmod +x /tmp/6optimization.sh
 [root@pxe ~]# setenforce 0
 ```
 
+cp rhel7_base_ks.cfg /var/www/html/rhel7.cfg
 
+cp 7optimization.sh /var/www/html/ks_config/7optimization.sh
+chmod +x /var/www/html/ks_config/7optimization.sh
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -390,15 +393,6 @@ label install7
 ```
 
 
-## kickstart快速准备脚本说明
-脚本分几块：
-配置基础环境
-配置PXE环境
-服务批量重启脚本、服务批量关闭脚本
-01_bashneed.sh:需要的yum库，需要安装的软件，需要配置的信息等
-02_
-
-分为6和7的脚本
 
 
 
