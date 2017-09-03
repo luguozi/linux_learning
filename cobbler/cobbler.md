@@ -46,13 +46,22 @@ Restart cobblerd and then run 'cobbler sync' to apply changes.
 
 
 1>
+```
 [root@node1 cobbler_soft]# vim /etc/cobbler/settings
 
 server: 192.168.0.1
+或者：
+[root@node1 cobbler_soft]#sed -i '/^server:/c server: \t 172.16.10.2' /etc/cobbler/settings
 
+```
 2>
+```
 [root@node1 cobbler_soft]# vim /etc/cobbler/settings
 next_server: 192.168.0.1
+或者：
+[root@localhost tmp]sed -i '/^next_server:/c next_server: \t 172.16.10.2' /etc/cobbler/settings
+```
+
 
 3> 
 [root@node1 cobbler_soft]# setenforce 0
@@ -92,6 +101,7 @@ $1$random-p$EzdrrbPoUkh61Vg28mD3e1
 [root@node1 ~]# vim /etc/cobbler/settings 
 default_password_crypted: "$1$random-p$MvGDzDfse5HkTwXB2OLNb."
 
+sed -i '/^default_password/c default_password_crypted: \t "$1$random-p$MvGDzDfse5HkTwXB2OLNb."' /etc/cobbler/settings
 
 
 10>
