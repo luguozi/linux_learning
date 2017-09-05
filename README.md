@@ -20,4 +20,8 @@ https://github.com/luguozi/linux_learning/tree/master/kickstart/kickstart
 
 ## mysql
 
-## git
+## giti
+
+
+## nagios
+已经知道远离,还差配置一个案例，和配置好脚本函数等，方便以后使用
