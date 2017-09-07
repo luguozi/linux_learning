@@ -17,6 +17,92 @@ Nagios 的缺点在于无法将多个相同应用集群的数据集合起来，�
 首先建立一个Nagios的Web主机，用来接受用户的Web访问。这里以servera作为nagios的server端：执行以下操作
 
 ```shell
+➜  pkg git:(master) pwd
+/Users/lmmys/luguozi_GitHub/linux_learning/nagios/pkg
+➜  pkg git:(master) scp * root@172.16.250.191:/tmp
+
+[root@localhost tmp]# setenforce 0
+[root@localhost tmp]# iptables -F
+[root@localhost tmp]# ls *.rpm
+fping-3.10-4.el7.x86_64.rpm
+nagios-3.5.1-1.el7.x86_64.rpm
+nagios-common-3.5.1-1.el7.x86_64.rpm
+nagios-devel-3.5.1-1.el7.x86_64.rpm
+nagios-plugins-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-all-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-apt-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-bonding-1.4-3.el7.x86_64.rpm
+nagios-plugins-breeze-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-by_ssh-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-check-updates-1.6.9-1.el7.x86_64.rpm
+nagios-plugins-cluster-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-dbi-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-dhcp-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-dig-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-disk-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-disk_smb-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-dns-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-dummy-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-file_age-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-flexlm-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-fping-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-game-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-hpjd-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-http-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-icmp-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ide_smart-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ifoperstatus-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ifstatus-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ircd-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ldap-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-load-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-log-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-mailq-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-mrtg-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-mrtgtraf-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-mysql-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-nagios-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-nrpe-2.15-2.el7.x86_64.rpm
+nagios-plugins-nt-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ntp-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ntp-perl-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-nwstat-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-openmanage-3.7.12-1.el7.x86_64.rpm
+nagios-plugins-oracle-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-overcr-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-perl-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-pgsql-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ping-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-procs-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-radius-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-real-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-rpc-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-sensors-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-smtp-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-snmp-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ssh-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-swap-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-tcp-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-time-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-ups-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-uptime-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-users-2.0.3-1.el7.x86_64.rpm
+nagios-plugins-wave-2.0.3-1.el7.x86_64.rpm
+nrpe-2.15-2.el7.x86_64.rpm
+perl-Class-Accessor-0.34-12.el7.noarch.rpm
+perl-Config-Tiny-2.14-7.el7.noarch.rpm
+perl-Crypt-DES-2.05-20.el7.x86_64.rpm
+perl-Math-Calc-Units-1.07-9.el7.noarch.rpm
+perl-Nagios-Plugin-0.36-7.el7.noarch.rpm
+perl-Net-SNMP-6.0.1-7.el7.noarch.rpm
+perl-Readonly-1.03-22.el7.noarch.rpm
+perl-Readonly-XS-1.05-15.el7.x86_64.rpm
+qstat-2.11-13.20080912svn311.el7.x86_64.rpm
+radiusclient-ng-0.5.6-9.el7.x86_64.rpm
+
+[root@localhost tmp]# yum -y localinstall *.rpm
+
+
 [root@servera conf.d]# vim /etc/httpd/conf.d/nagios.conf 
 ScriptAlias /nagios/cgi-bin/ "/usr/lib64/nagios/cgi-bin/"
 
@@ -91,9 +177,9 @@ nagiosadmin:$apr1$YKvTZ4/1$Puhwv8zlVMOJRke9xtJxC/
 [root@servera conf.d]# 
 ```
 
-配置正常后，安装nagios软件包（软件包可以在classroom服务器下载），并启动 httpd 和nagios服务，
+配置正常后，启动 httpd 和nagios服务，
 ```shell
-[root@servera nagios]# yum -y localinstall *.rpm
+
 [root@servera conf.d]# systemctl restart httpd
 [root@servera conf.d]# systemctl restart nagios
 ```
@@ -475,7 +561,39 @@ checking for SSL headers... configure: error: Cannot find ssl headers
 find ssl headers原因是缺少openssl-devel包，yum -y install openssl-devel
 
 [root@localhost nrpe-2.12]# yum -y install openssl-devel
-[root@localhost nrpe-2.12]# make all
+[root@localhost nrpe-2.12]# ./configure
+[root@serverb nrpe-2.12]# make all
+[root@serverb nrpe-2.12]# make install-plugin
+[root@serverb nrpe-2.12]# make install-daemon
+[root@serverb nrpe-2.12]# make install-daemon-config
+[root@serverb nrpe-2.12]# make install-xinetd
+[root@serverb nrpe-2.12]# vim /etc/xinetd.d/nrpe 
+        only_from       = 127.0.0.1 172.25.1.10
+
+[root@serverb nrpe-2.12]# vim /etc/services 
+nrpe            5666/tcp                # nrpe
+
+
+[root@serverb ~]# vim /usr/local/nagios/etc/nrpe.cfg
+command[check_uu]=/usr/lib64/nagios/plugins/check_users -w 5 -c 10
+command[check_ll]=/usr/lib64/nagios/plugins/check_load -w 15,10,5 -c 30,25,20
+command[check_root]=/usr/lib64/nagios/plugins/check_disk -w 20% -c 10% -p /
+command[check_zombie_procs]=/usr/lib64/nagios/plugins/check_procs -w 5 -c 10 -s Z
+command[check_total_procs]=/usr/lib64/nagios/plugins/check_procs -w 150 -c 200 
+command[check_haha]=/usr/lib64/nagios/plugins/check_swap -w 20% -c 10%
+
+[root@serverb ~]# systemctl restart  xinetd
+[root@serverb ~]# netstat -tnlp |grep :5666
+tcp        0      0 0.0.0.0:5666            0.0.0.0:*               LISTEN      2330/nrpe           
+tcp6       0      0 :::5666                 :::*                    LISTEN      2330/nrpe
+
+本地检测:
+[root@serverb nrpe-2.12]# /usr/local/nagios/libexec/check_nrpe -H localhost
+[root@serverb nrpe-2.12]# hostname serverb.pod1.example.com
+[root@serverb nrpe-2.12]# vi /etc/hostname
+[root@serverb nrpe-2.12]# cat /etc/hostname
+serverb.pod1.example.com
+
 
 
 ```
@@ -616,6 +734,16 @@ Things look okay - No serious problems were detected during the pre-flight check
 
 ```
 
+```
+[root@localhost objects]# /usr/lib64/nagios/plugins/check_nrpe -H 172.16.250.216
+NRPE v2.12
+
+[root@servera ~]#  /usr/lib64/nagios/plugins/check_nrpe -H 172.25.1.11 -c check_haha
+SWAP OK - 100% free (10238 MB out of 10238 MB) |swap=10238MB;2047;1023;0;10238
+
+```
+
+
 确认配置文件无误后，重启nagios服务
 
 ```shell
@@ -635,4 +763,8 @@ Things look okay - No serious problems were detected during the pre-flight check
 ![](nagios/4.png)
 
 更多的配置和使用方法请大家查看官方文档继续学习。
+
+www.nagios.org/about/ 
+https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/quickstart.html
+https://library.nagios.com/library/products/nagios-core/manuals//
 
