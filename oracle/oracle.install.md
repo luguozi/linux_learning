@@ -1,5 +1,6 @@
 
-#oracle11g R2 安装配置过程
+# oracle11g R2 安装配置过程
+
 [TOC]
 
 ### version
