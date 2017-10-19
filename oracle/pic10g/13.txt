@@ -1,0 +1,457 @@
+
+目录服务器诊断
+
+正在执行初始化设置:
+   正在尝试查找主服务器...
+   主服务器 = DC1
+   * 已识别的 AD 林。 
+   已完成收集初始化信息。
+
+正在进行所需的初始化测试
+   
+   正在测试服务器: Default-First-Site-Name\DC1
+      开始测试: Connectivity
+         ......................... DC1 已通过测试 Connectivity
+
+正在执行主要测试
+   
+   正在测试服务器: Default-First-Site-Name\DC1
+      开始测试: Advertising
+         ......................... DC1 已通过测试 Advertising
+      开始测试: FrsEvent
+         ......................... DC1 已通过测试 FrsEvent
+      开始测试: DFSREvent
+         ......................... DC1 已通过测试 DFSREvent
+      开始测试: SysVolCheck
+         ......................... DC1 已通过测试 SysVolCheck
+      开始测试: KccEvent
+         发生了一个警告事件。EventID: 0x80000B46
+            生成时间: 10/12/2017   15:45:59
+            事件字符串:
+            通过将目录服务器配置为拒绝不请求签名(完整性验证)的 SASL (协商式、Kerberos、NTLM 或摘要式) LDAP 绑定和在明 文(非 SSL/TLS 加密的)连接上执行的 LDAP 简单绑定，可以显著增强此服务器的安全性。即使没有任何客户端使用这 样的绑定，将该服务器配置为拒绝这样的绑定也将提高此服务器的安全性。  
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:46:32
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:46:32
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:46:32
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:46:33
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:46:33
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:46:33
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:46:37
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:46:37
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:46:37
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:46:56
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:46:56
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:46:56
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个警告事件。EventID: 0x8000082C
+            生成时间: 10/12/2017   15:47:00
+            事件字符串: 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:47:15
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:47:15
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:47:15
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:47:45
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:47:45
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:47:45
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:48:01
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:48:01
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:48:01
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:48:25
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:48:25
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:48:25
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:48:45
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:48:45
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:48:45
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:49:02
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:49:02
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:49:02
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:49:17
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:49:17
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:49:17
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:49:45
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:49:45
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:49:45
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:50:18
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:50:18
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:50:18
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:50:46
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:50:46
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:50:46
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个警告事件。EventID: 0x8000051C
+            生成时间: 10/12/2017   15:51:00
+            事件字符串: 知识一致性检查器(KCC)已经检测到与下列目录服务复制的持续尝试一直失败。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:51:10
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:51:10
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:51:10
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:51:46
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:51:46
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:51:46
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:52:07
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:52:07
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:52:07
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:52:46
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:52:46
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:52:46
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:53:01
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:53:01
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:53:01
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:53:18
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:53:18
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:53:18
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:53:46
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:53:46
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:53:46
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:54:01
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:54:01
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:54:01
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:54:19
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:54:19
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:54:19
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:54:46
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:54:46
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:54:46
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         发生了一个错误事件。EventID: 0xC00007C4
+            生成时间: 10/12/2017   15:55:02
+            事件字符串:
+            Active Directory 域服务复制发现以下分区中存在的对象已从本地域控制器(DS) Active Directory 域服务数据库中删除。在 tombstone 生存时间的天数过去之前，并非所有直接或可传递的复制伙伴复制该删除。已从 Active Directory 域服务分区删除并垃圾收集的对象，如果仍存在于相同域中其他 DS 的可写分区中，或林中其他域中的全局编录服务器的只读分区中，则被称作“延迟对象”。
+         发生了一个警告事件。EventID: 0x80000495
+            生成时间: 10/12/2017   15:55:02
+            事件字符串:
+            Internal event: Active Directory Domain Services has encountered the following exception and associated parameters. 
+         发生了一个错误事件。EventID: 0xC000069E
+            生成时间: 10/12/2017   15:55:02
+            事件字符串:
+            Active Directory 域服务无法对属性值发生更改的以下对象进行更新，该更改接收自以下源目录服务。这是因为将这些更改应用到本地 Active Directory 域服务数据库时发生错误。 
+         ......................... DC1 没有通过测试 KccEvent
+      开始测试: KnowsOfRoleHolders
+         ......................... DC1 已通过测试 KnowsOfRoleHolders
+      开始测试: MachineAccount
+         ......................... DC1 已通过测试 MachineAccount
+      开始测试: NCSecDesc
+         ......................... DC1 已通过测试 NCSecDesc
+      开始测试: NetLogons
+         ......................... DC1 已通过测试 NetLogons
+      开始测试: ObjectsReplicated
+         ......................... DC1 已通过测试 ObjectsReplicated
+      开始测试: Replications
+         [Replications Check，DC1] 最近的复制尝试失败:
+            从 DC2 到 DC1
+            命名上下文: DC=GWVDesktop,DC=gdufs,DC=edu,DC=cn
+            复制生成一个错误(8442):
+            复制系统遇到一个内部错误。
+            失败发生在 2017-10-12 15:55:02。
+            上次成功发生在 2017-02-21 10:12:04。
+            自从上次成功已发生 364813 次失败。
+            严重错误正在阻止继续复制。
+            有关详细信息，请参阅错误日志。
+            如果特殊的对象已命名，则可能有必要手动
+            修改或删除该对象。
+            如果这种情况仍然存在，请与 Microsoft 支持人员联系。
+         ......................... DC1 没有通过测试 Replications
+      开始测试: RidManager
+         ......................... DC1 已通过测试 RidManager
+      开始测试: Services
+         ......................... DC1 已通过测试 Services
+      开始测试: SystemLog
+         发生了一个错误事件。EventID: 0xC00038D6
+            生成时间: 10/12/2017   15:20:01
+            事件字符串: DFS 命名空间服务无法初始化该域控制器上的跨林信任信息，但该服务将定期重试该操作。返回代码位于记录数据中。
+         发生了一个警告事件。EventID: 0x0000000C
+            生成时间: 10/12/2017   15:20:03
+            事件字符串:
+            时间提供程序 NtpClient: 此机器配置为用域层级确定它的时间源，但它已经是在林的根目录域的 AD PDC 仿真，因此在域层级没有机器在它上面以用作时间源。建议您在根域上配置一个可靠的时间服务，或者手动配置 AD PDC 与外部时间源同步。否则，此机器将在域层级中作为权威的时间源。如果没有为此计算机配置或使用外部时间源，您可以选择禁用 NtpClient。
+         发生了一个警告事件。EventID: 0x000003F6
+            生成时间: 10/12/2017   15:20:16
+            事件字符串: 在没有配置的 DNS 服务器响应之后，名称 www.msftncsi.com 的名称解析超时。
+         发生了一个警告事件。EventID: 0x000727AA
+            生成时间: 10/12/2017   15:22:02
+            事件字符串:
+            WinRM 服务无法创建以下 SPN: WSMAN/DC1.GWVDesktop.gdufs.edu.cn; WSMAN/DC1。
+         发生了一个错误事件。EventID: 0x0000165B
+            生成时间: 10/12/2017   15:22:02
+            事件字符串:
+            从计算机 'OFF-DESK02_032' 设置会话失败，因为安全数据库 没有包含指定计算机引用的信任帐户 'OFF-DESK02_032$'。  
+         发生了一个错误事件。EventID: 0x000016AD
+            生成时间: 10/12/2017   15:24:28
+            事件字符串: 从计算机 OFF-DESK02_032 设置的会话未能进行身份验证。 发生下列错误: 
+         发生了一个错误事件。EventID: 0x0000165B
+            生成时间: 10/12/2017   15:24:28
+            事件字符串:
+            从计算机 'OFF-DESK02_003' 设置会话失败，因为安全数据库 没有包含指定计算机引用的信任帐户 'OFF-DESK02_003$'。  
+         发生了一个错误事件。EventID: 0x000016AD
+            生成时间: 10/12/2017   15:36:32
+            事件字符串: 从计算机 OFF-DESK02_003 设置的会话未能进行身份验证。 发生下列错误: 
+         发生了一个警告事件。EventID: 0x000003F6
+            生成时间: 10/12/2017   15:46:33
+            事件字符串:
+            在没有配置的 DNS 服务器响应之后，名称 _ldap._tcp.Default-First-Site-Name._sites.dc._msdcs.hview.gdufs.edu.cn 的名称解析超时。
+         发生了一个错误事件。EventID: 0xC00038D6
+            生成时间: 10/12/2017   15:46:52
+            事件字符串: DFS 命名空间服务无法初始化该域控制器上的跨林信任信息，但该服务将定期重试该操作。返回代码位于记录数据中。
+         发生了一个警告事件。EventID: 0x0000000C
+            生成时间: 10/12/2017   15:46:54
+            事件字符串:
+            时间提供程序 NtpClient: 此机器配置为用域层级确定它的时间源，但它已经是在林的根目录域的 AD PDC 仿真，因此在域层级没有机器在它上面以用作时间源。建议您在根域上配置一个可靠的时间服务，或者手动配置 AD PDC 与外部时间源同步。否则，此机器将在域层级中作为权威的时间源。如果没有为此计算机配置或使用外部时间源，您可以选择禁用 NtpClient。
+         发生了一个警告事件。EventID: 0x000727AA
+            生成时间: 10/12/2017   15:48:53
+            事件字符串:
+            WinRM 服务无法创建以下 SPN: WSMAN/DC1.GWVDesktop.gdufs.edu.cn; WSMAN/DC1。
+         ......................... DC1 没有通过测试 SystemLog
+      开始测试: VerifyReferences
+         ......................... DC1 已通过测试 VerifyReferences
+   
+   
+   正在 ForestDnsZones
+    上运行分区测试
+      开始测试: CheckSDRefDom
+         ......................... ForestDnsZones 已通过测试 CheckSDRefDom
+      开始测试: CrossRefValidation
+         ......................... ForestDnsZones 已通过测试 CrossRefValidation
+   
+   正在 DomainDnsZones
+    上运行分区测试
+      开始测试: CheckSDRefDom
+         ......................... DomainDnsZones 已通过测试 CheckSDRefDom
+      开始测试: CrossRefValidation
+         ......................... DomainDnsZones 已通过测试 CrossRefValidation
+   
+   正在 Schema
+    上运行分区测试
+      开始测试: CheckSDRefDom
+         ......................... Schema 已通过测试 CheckSDRefDom
+      开始测试: CrossRefValidation
+         ......................... Schema 已通过测试 CrossRefValidation
+   
+   正在 Configuration
+    上运行分区测试
+      开始测试: CheckSDRefDom
+         ......................... Configuration 已通过测试 CheckSDRefDom
+      开始测试: CrossRefValidation
+         ......................... Configuration 已通过测试 CrossRefValidation
+   
+   正在 GWVDesktop
+    上运行分区测试
+      开始测试: CheckSDRefDom
+         ......................... GWVDesktop 已通过测试 CheckSDRefDom
+      开始测试: CrossRefValidation
+         ......................... GWVDesktop 已通过测试 CrossRefValidation
+   
+   正在 GWVDesktop.gdufs.edu.cn
+    上运行企业测试
+      开始测试: LocatorCheck
+         ......................... GWVDesktop.gdufs.edu.cn 已通过测试 LocatorCheck
+      开始测试: Intersite
+         ......................... GWVDesktop.gdufs.edu.cn 已通过测试 Intersite
