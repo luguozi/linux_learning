@@ -16,7 +16,7 @@ pkg      ：10201_database_linux_x86_64.cpio.gz、p8202632_10205_Linux-x86-64.zi
 ### 账户信息
 ```
 IP：10.168.125.71
-root:Gdufs2015@)!%
+root:*************
 oracle:1qaz!QAZ
 
 
