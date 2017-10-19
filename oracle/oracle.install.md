@@ -11,6 +11,40 @@ oracle   ：oracle11g R2
 hostname : dbserver
 ```
 
+
+### 账户信息
+```
+IP：10.168.125.71
+root:*************
+oracle:1qaz!QAZ
+
+https://dbserver:1158/em
+用户名 / 密码               登录身份                              说明
+sys/1qaz!QAZ      SYSDBA 或 SYSOPER        不能以 NORMAL 登录，可作为默认的系统管理员
+system/1qaz!QAZ     SYSDBA 或 NORMAL       不能以 SYSOPER 登录，可作为默认的系统管理员
+
+```
+
+
+### 服务开启、关闭、重启
+
+- 开启oracle服务
+```
+# /etc/rc.d/init.d/oracle start
+```
+
+- 关闭oracle服务
+```
+# /etc/rc.d/init.d/oracle stop
+```
+
+- 重启oracle服务
+```
+# /etc/rc.d/init.d/oracle restart
+```
+
+
+
 ### install 过程
 ```
 [root@dbserver ~]# vi /etc/sysconfig/network-scripts/ifcfg-eth0
@@ -309,37 +343,6 @@ $ ln -s /etc/rc.d/init.d/oracle /etc/rc.d/rc0.d/K01oracle # 停止
 $ ln -s /etc/rc.d/init.d/oracle /etc/rc.d/rc6.d/K01oracle # 重新启动
 ```
 
-### 服务开启、关闭、重启
-
-- 开启oracle服务
-```
-# /etc/rc.d/init.d/oracle start
-```
-
-- 关闭oracle服务
-```
-# /etc/rc.d/init.d/oracle stop
-```
-
-- 重启oracle服务
-```
-# /etc/rc.d/init.d/oracle restart
-```
-
-
-
-### 账户信息
-```
-IP：10.168.125.71
-root:Gdufs2015@)!%
-oracle:1qaz!QAZ
-
-https://dbserver:1158/em
-用户名 / 密码               登录身份                              说明
-sys/1qaz!QAZ      SYSDBA 或 SYSOPER        不能以 NORMAL 登录，可作为默认的系统管理员
-system/1qaz!QAZ     SYSDBA 或 NORMAL       不能以 SYSOPER 登录，可作为默认的系统管理员
-
-```
 
 
 ### 附件：db.rsp 文件
